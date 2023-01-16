@@ -1,3 +1,4 @@
+import os
 import sys
 import irc.bot
 import requests
@@ -62,4 +63,4 @@ def main(client_id, token, channel):
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    main("22d7fhjwmqm0hu1f85tmt675pjq3jh", "hp42uhvxh84x3pl2w1n3pr3uimvxti", args[0])
+    main(os.getenv("API_KEY"), os.getenv("API_SECRET"), args[0])
